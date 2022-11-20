@@ -1,1 +1,16 @@
+<div class="status" [class.offline]="!status">
+  {{ status ? 'Online' : 'Offline' }}
+</div>
 
+<div *ngIf="(observeStream$ | async) as stream; else loading">
+  {{stream}}
+</div>
+
+<ng-template #loading>
+  Subscribing to service...
+</ng-template>
+
+<div class="buttons">
+  <button mat-raised-button class="button" (click)="stop()">Stop</button>
+  <button mat-raised-button class="button" (click)="start()">Start</button>
+</div>
