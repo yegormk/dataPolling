@@ -6,7 +6,7 @@ import {
   repeatWhen,
   Subject,
   switchMap,
-  takeUntil, tap,
+  takeUntil,
   timer,
 } from 'rxjs';
 
