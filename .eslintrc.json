@@ -1,0 +1,71 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*",
+    "*.spec.ts",
+    "polyfills.ts"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:prettier/recommended"
+      ],
+      "rules": {
+        "semi": ["error", "always"],
+        "quotes": ["error", "single"],
+        "comma-spacing": ["error", { "after": true }],
+        "comma-dangle": ["error", "always-multiline"],
+        "eol-last": ["error","always"],
+        "eqeqeq": ["error", "always"],
+        "object-curly-spacing": ["error", "always"],
+        "max-len": ["error",{
+          "code": 120,
+          "tabWidth": 2,
+          "ignoreStrings": true,
+          "ignoreComments": true,
+          "ignoreTrailingComments": true,
+          "ignoreUrls": true
+        }],
+        "no-duplicate-imports": ["error"],
+        "no-empty": ["error", { "allowEmptyCatch": true }],
+        "arrow-parens": ["error", "as-needed"],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    }
+  ]
+}
