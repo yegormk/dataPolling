@@ -6,20 +6,11 @@ import { AppComponent } from './app.component';
 
 import { OnlineStatusModule } from 'ngx-online-status';
 
-import { BnNgIdleService } from 'bn-ng-idle'; // import bn-ng-idle service
-
-import { MatButtonModule } from '@angular/material/button';
-
-export const materialModules = [MatButtonModule];
+import { BnNgIdleService } from 'bn-ng-idle';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    OnlineStatusModule,
-    materialModules,
-  ],
+  imports: [BrowserModule, BrowserAnimationsModule, OnlineStatusModule],
   providers: [BnNgIdleService],
   bootstrap: [AppComponent],
 })

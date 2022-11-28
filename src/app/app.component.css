@@ -1,17 +1,1 @@
-.buttons {
-  display: flex;
-  gap: .5rem;
-}
 
-.status {
-  height: 48px;
-  background-color: #00c000;
-  text-align: center;
-  color: #fff;
-  line-height: 48px;
-  transition: background-color 1s ease;
-}
-
-.status.offline {
-  background-color: grey;
-}
