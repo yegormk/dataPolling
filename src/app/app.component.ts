@@ -11,6 +11,6 @@ export class AppComponent implements OnInit {
   constructor(private pollingService: PollingService) {}
 
   ngOnInit(): void {
-    this.pollingService.startPolling();
+    this.pollingService.startPolling().subscribe((x: string) => console.log(x));
   }
 }

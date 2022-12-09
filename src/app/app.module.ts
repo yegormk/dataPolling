@@ -4,14 +4,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 
-import { OnlineStatusModule } from 'ngx-online-status';
-
-import { BnNgIdleService } from 'bn-ng-idle';
-
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, OnlineStatusModule],
-  providers: [BnNgIdleService],
+  imports: [BrowserModule, BrowserAnimationsModule],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
